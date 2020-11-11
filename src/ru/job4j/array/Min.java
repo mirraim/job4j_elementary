@@ -11,4 +11,15 @@ public class Min {
         }
         return min;
     }
+
+    public static int findMin(int[] array, int start, int finish) {
+        int min = array[start];
+        for (int index = start + 1; index <= finish; index++) {
+            /* проверить, что эталон больше, чем элемент. записать в эталон элемент массива. */
+            if (array[index] < min) {
+                min = array[index];
+            }
+        }
+        return min;
+    }
 }
