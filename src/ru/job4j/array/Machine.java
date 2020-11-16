@@ -5,6 +5,12 @@ import java.util.Arrays;
 public class Machine {
     private static final int[] COINS = {10, 5, 2, 1};
 
+    /**
+     * Жадный алгоритм. Записываем в массив набор монет
+     * @param money
+     * @param price
+     * @return
+     */
     public int[] change(int money, int price) {
         int[] rsl = new int[100];
         int size = 0;
@@ -16,16 +22,6 @@ public class Machine {
                 size++;
             }
         }
-        /*while (remain > 0) {
-            for (int i = 0; i < COINS.length; i++) {
-                if (remain >= COINS[i]) {
-                    rsl[size] = COINS[i];
-                    remain -= COINS[i];
-                    break;
-                }
-            }
-            size++;
-        }*/
         return Arrays.copyOf(rsl, size);
     }
 }

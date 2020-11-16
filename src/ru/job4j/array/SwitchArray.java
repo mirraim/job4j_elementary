@@ -1,6 +1,13 @@
 package ru.job4j.array;
 
 public class SwitchArray {
+    /**
+     * Меняем две ячейки массива местами
+     * @param array
+     * @param source
+     * @param dest
+     * @return
+     */
     public static int[] swap(int[] array, int source, int dest) {
             int temp = array[source];
             array[source] = array[dest];
@@ -8,6 +15,11 @@ public class SwitchArray {
         return array;
     }
 
+    /**
+     * меняем местами первую и последнюю ячейки массива
+     * @param array
+     * @return
+     */
     public static int[] swapBorder(int[] array) {
         int temp = array[0];
         array[0] = array[array.length - 1];

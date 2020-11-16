@@ -1,6 +1,11 @@
 package ru.job4j.array;
 
 public class Matrix {
+    /**
+     * Перемножаем индексы двумерного массива
+     * @param size
+     * @return
+     */
     public static int[][] multiple(int size) {
         int[][] array = new int[size][size];
         for (int row = 0; row < array.length; row++) {

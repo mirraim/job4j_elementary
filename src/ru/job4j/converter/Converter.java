@@ -13,11 +13,11 @@ public class Converter {
     public static void main(String[] args) {
         int in = 140;
         int expected = 2;
-        int out = Converter.rubleToEuro(in);
+        int out = rubleToEuro(in);
         boolean passed = out == expected;
         System.out.println("140 rubles are 2 euro. Test result : " + passed);
         in = 120;
-        out = Converter.rubleToDollar(in);
+        out = rubleToDollar(in);
         passed = out == expected;
         System.out.println("120 rubles are 2 dollars. Test result : " + passed);
     }

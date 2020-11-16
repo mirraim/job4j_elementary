@@ -1,13 +1,17 @@
 package ru.job4j.loop;
 
 public class Slash {
+    /**
+     * Отрисовываем две диагонали
+     * @param size
+     */
     public static void draw(int size) {
         int leftIndex = 0;
         int rightIndex = size - 1;
         for (int row = 0; row < size; row++) {
             for (int cell = 0; cell < size; cell++) {
-                boolean left = cell == leftIndex; /* добавить условие, по которому нужно определить ставить ли символ или нет. */
-                boolean right = cell == rightIndex; /* добавить условие, что нужно ставить элемент в правый угол. */
+                boolean left = cell == leftIndex;
+                boolean right = cell == rightIndex;
                 if (left) {
                     System.out.print("0");
                 } else if (right) {
