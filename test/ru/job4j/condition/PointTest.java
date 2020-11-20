@@ -32,4 +32,13 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
+    @Test
+    public void when0Neg33toNeg313then5() {
+        Point start = new Point(0, -3, 3);
+        Point end = new Point(3, 1, 3);
+        int expected = 5;
+        double out = start.distance3d(end);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
 }
