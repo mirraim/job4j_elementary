@@ -9,6 +9,8 @@ public class College {
         petrov.setFullName("Петров Александр Петрович");
         petrov.setGroup(3);
         petrov.setDate(LocalDate.of(2020, 8, 25));
-        System.out.println(petrov.toString());
+        System.out.println("fullName='" + petrov.getFullName() + '\''
+                + ", group=" + petrov.getGroup()
+                + ", date=" + petrov.getDate());
     }
 }
