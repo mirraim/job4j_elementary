@@ -5,7 +5,20 @@ import java.util.Map;
 
 public class FreezeStr {
     public static boolean eq(String left, String right) {
-        return fillMap(left).equals(fillMap(right));
+        Map<String, Integer> rsl = fillMap(left);
+        for (int i = 0; i < right.length(); i++) {
+            String symbol = String.valueOf(right.charAt(i));
+            if (!rsl.containsKey(symbol)) {
+                return false;
+            }
+            int quantity = rsl.get(symbol);
+            if (quantity <= 1) {
+                rsl.remove(symbol);
+            } else {
+                rsl.put(symbol, quantity - 1);
+            }
+        }
+        return rsl.isEmpty();
     }
 
     public static Map<String, Integer> fillMap(String word) {
